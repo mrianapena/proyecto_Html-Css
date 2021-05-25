@@ -1,0 +1,157 @@
+*{  margin:0px;                /*acá modifico las caracteríasticas de la página*/
+    padding: 0px;
+    box-sizing: border-box; }
+
+body {font-family: 'Montserrat', sans-serif;}
+
+a {text-decoration: none;}
+
+.padre {display: flex;
+        flex-flow: column nowrap;}
+
+.margen-interno{ padding: 0 50px;}
+
+.header {background: url(imagenes/IMG-20180817-WA0005.jpg); /*acá modifico el encabezado de la página*/
+        background-position: center;
+        background-size: cover;
+        background-attachment: contain;
+        display: flex;
+        flex-flow: column nowrap;}
+
+    .menú {background: rgba(0,0,0,.1); ;
+            display: flex;
+            flex-wrap: nowrap;
+            height: 60px;
+            align-items: center;
+            border-bottom: 1px solid rgb(255,255,.5): }   /*acá modifico el menú de navegación de la página*/
+        .logo{flex: 1 1 auto;}
+            .logo a{color: #fff;    font-size: 30px;}
+            .logo a:hover {color: #343434;}
+        .nav{flex: 5 1 auto;
+            text-align: center;}
+            .nav a{ color: #fff;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    padding: 0 10px;
+                    letter-spacing: 2px;}
+            .nav a:hover {color: #343434;}
+        .social{flex: 1 1 auto;}
+            .social a{color: #fff;}
+    .principal{ /*background: #fabc60;*/
+        height: 600px;
+        display: flex;
+        align-items: center;}
+        
+        h1{ font-family: 'Lora', sans-serif;;
+            font-size: 15px;
+            color: #fff;
+            font-weight: 300;
+            text-align: center;}
+
+.section { background: #f7f7f7;
+    display: flex;}
+    .articulos{ background: #f7f7f7 ;
+                flex: 2 1 auto;
+                display: flex;
+                flex-flow: row wrap;}
+        
+        .article{flex: 1 1 40%; 
+                color: #444;
+                font-size: 10px;
+                letter-spacing: 1px;
+                margin: 10px 10px 0 0px;
+                /*flex: 1 1 45%;*/
+                background:#ececec;}
+
+        .article img{ width: 100%; }
+
+        .article a {color: #fff;
+                    font-size: 13px;
+                    padding: 10px 10px;
+                    background: #000;
+                    margin: 10px 0;
+                    display: inline-block;}
+        
+        .article a:hover {background: #546cc3;}
+
+        h3{color: #fff;
+            font-size: 10px;
+            padding: 10px 5px;
+            margin-top: -80px; /* el margin hace que se desplace ha*/}
+        
+        h2{color: #fff;
+            font-size: 20px;
+            padding:5px  10px;}
+
+        p {color: black;
+            font-size: 12px;
+            padding:10px;
+            margin-top: 5px;}
+
+        .navegacion{ background: #000;
+            flex: 1 1 100% ;
+            margin: 10px 10px 0 0px;
+            text-align: center;}
+
+        .navegacion a{ color: #fff;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        padding: 0 10px;
+                        letter-spacing: 2px;}
+    
+    .aside{ /*background: darkseagreen*/;
+            flex: 1 1 auto;
+            margin: 10px 5px 10px 5px;}
+
+    .aside img{width: 100%;}
+
+    h4 { background: #000;
+        color: #fff;
+        padding: 10px;
+        text-transform: uppercase; }
+
+        .publicidad{ /*background: darkslategrey;*/}
+
+.footer {background: #000;    /*acá modifico el pie de la página*/
+        display: flex;    
+        justify-content: center;
+        margin-top: 10px;}
+    
+    .pie{ background: #000;
+        text-align: center;    
+        width: 300px;}
+
+    .pie a{ color: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+            padding: 0 10px;
+            letter-spacing: 2px;}
+
+/*acá modifico el comportamiento de las distintas secciones de la página frente a los distintos tamaños de dispositvos*/
+@media all and (max-width: 800px) { 
+    .section { 
+        flex-direction: column;
+    }
+    .menú { 
+        flex-direction: column;    
+        height: auto;
+    } 
+    .aside{
+        display: flex;
+        justify-content: center;
+    }
+    h1{font-size: 12px;}
+    .principal{ height: 450px; }
+}
+
+@media all and (max-width: 600px){
+    .articulos{
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 400px){
+    .asidee{
+        flex-direction: column;
+    }
+}
